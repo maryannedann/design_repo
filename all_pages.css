@@ -2,7 +2,9 @@ body {
     font-family: 'Times New Roman', Times, serif;
     background-color: #FCF6F5;
     }
+
 nav, a {
+    justify-content: center;
     text-decoration: none;
     text-align: center;
     padding: 40px;
