@@ -8,34 +8,60 @@
     <link rel="shortcut icon" type="image/x-icon" href="../project/projectimages/favicon.ico">
     <style>
 
-    
-
-        .preview_boarder {
-            border-left: 2px solid #C80004;
-            margin-top: 150px;
+        div a {
+            text-decoration: none;
+            color: white;
         }
-        .preview_fb {
-            display: flex;
-            padding: 50px;
-            align-items: flex-start;
-            padding: 40px; 
-            margin-left: 40px;
-            overflow-x: auto; 
-            overflow-y: hidden;
-        }
-
-        .preview_header {
-            padding: 20px;
-            font-size: 36px; 
-            font-weight: bold; 
-            margin-bottom: 20px; 
-            width: 100%; 
+       .container {
+            justify-content: space-between;
+            margin: 30px;
+            overflow: hidden; 
         }
       
-        .preview_imgs {
-            display: inline-block;
-            padding: 10px; 
+        .banner {
+            position: relative; 
+            width: 100%;
+            height: 300px; 
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px;
+            transition: transform 0.3s ease;
+            border-radius: 10px;
+
         }
+
+        .banner:hover {
+            transform: scale(1.05); 
+        }
+
+        .banner:nth-child(1) {
+            background-image: url('../design_repo/images/image.png');
+            margin-top: 150px;
+        }
+        .banner:nth-child(2) {
+            background-image: url('../design_repo/images/text.png');
+        }
+        .banner:nth-child(3) {
+            background-image: url('../design_repo/images/data.png');
+        }
+
+        .banner-text {
+            position: absolute;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+        }
+
+    
+
+        
         figcaption {
             text-align: center;
         }
@@ -74,6 +100,48 @@
             text-align: center;
         }
 
+        .contact_text {
+            text-align: center;
+            font-size: 26px;
+            margin-top: 50px;
+            color:#C80004;
+        }
+        .contact_fb {
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .form_fb {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+        .name_email {
+            margin-right: 50px;
+        }
+        .form_tb {
+            width: 100%;
+        }
+        .submit {
+            margin-top: 20px;
+            background-color: #C80004;
+            color: #FBA105;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        .social_logos {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 100px;
+        }
+        .social_text {
+            font-size: 32px;
+            color:#C80004;
+        }
      
         
         @media screen and (max-width: 768px) {
@@ -99,16 +167,36 @@
 
 <body>
     <header>
+        <nav>
+            <a class='nav_links' href="home.html">About Me</a></li>
+            <a class='nav_links' href="graphicdesign_home.html">Portfolios</a></li>
+            <a class='nav_links' href="data_home.html">Contact</a></li>
+        </nav>
         <img src="../design_repo/images/personal_logo.png" alt="Personal Logo" class="nav_logo">
     </header>
-    
-    <nav class="nav_links">
-        <div class="nav_menu">
-            <a href="portfolio.html" class="nav_link">PORTFOLIOS</a>
-            <a href="home.html" class="nav_link">HOME</a> 
-            <a href="contact.html" class="nav_link">CONTACT</a>
+
+    <div class="container">
+            
+        <div class="banner">
+            <div class="banner-text">
+                <h1>Front End Web Design</h1>
+            </div>
         </div>
-    </nav>
+        
+        <div class="banner">
+            <div class="banner-text">
+                <a href="graphicdesign_home.html"><h1>Graphic Design</h1></a>
+            </div>
+        </div>
+        
+        <div class="banner">
+            <div class="banner-text">
+                <h1>Data Analytics</h1>
+            </div>
+        </div>
+        
+    </div>
+   
         
     <div class="aboutme_fb">
         <div class="aboutme_text">
@@ -125,12 +213,38 @@
     </div>
     
 
+    <div class="contact_fb">
+        <h1 class="contact_text">If you have any questions or would like to contact me, please fill out the form below.</h1>
 
+        <form action="https://formspree.io/f/xoqgebkk" method="post">
+            <div class="form_fb">
+                <div class="name_email">
+                    <label for="name" class="contact_text">Name</label><br>
+                    <textarea id="name" name="name" rows="3" cols="40" class="form_tb"></textarea>
+                    <br>
+                    <br>
+                    <br>
+                    <label for="email" class="contact_text">Email</label><br>
+                    <textarea id="email" name="email" rows="3" cols="40" class="form_tb"></textarea><br>
+                </div>
+                <div class="reccomendation">
+                    <label for ="comment" class="contact_text">Comment</label><br>
+                    <textarea id="comment" name="comment" rows="10" cols="80" class="form_tb"></textarea><br>
+                    <input type="submit" class="submit" value="Submit">
+                </div>
+            </div>
+                
+            </form>
+    </div>
+
+    <div class="social_logos">
+        <h1 class="social_text">Follow me on my socials!</h1>
+    </div>
 
    
    
     <footer>
-    <p> &copy; 2025 Mary Daniel. All Rights Reserved.</p>
+    <p class="footer_text"> &copy; 2025 Mary Daniel. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
