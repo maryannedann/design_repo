@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Review: Uncut Gems</title>
+    <link rel="stylesheet" href="allpages.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../project/projectimages/favicon.ico">
+    <style>
+         img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 25px;
+        }
+        .review_title {
+            display: flex;
+            font-size: 70px;
+            justify-content: center;
+            padding: 50px;
+        }
+        .review_text { 
+            margin: 80px;
+            font-size: 30px;
+            line-height: 55px;
+        }
+
+        @media screen and (max-width: 768px) {
+        .review_title {
+        font-size: 40px; 
+        padding: 30px; 
+        }
+
+        .review_text {
+        margin: 20px; 
+        font-size: 18px;
+        line-height: 28px; 
+        }
+
+        img {
+            width: 100%; 
+            max-width: 750px; 
+            height: auto;
+        }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="projectimages/logo2.png" alt="Banner Logo" id="desktop_logo">
+    
+        <img src="projectimages/smaller_logo.png" alt="Mobile Logo" id="mobile_logo">
+    </header>
+    
+    <nav class="nav_links">
+        <hr>
+        <a href="page1_home.html">HOME</a> 
+        <a href="page2_reviews.html">REVIEWS</a>
+        <a href="page3_top10.html">TOP 10</a>
+        <hr>
+    </nav>
+
+    <img src="../project/projectimages/uncutgems2.jpeg" width="750" height="450">
+    
+        <div class="review_title">Uncut Gems: An Anxiety Filled Movie</div>
+
+        <div class="review_text">
+            "Uncut Gems" isn't just a movie it is a rollercoaster ride. From the mind of filmmaking duo Josh and Benny Safdie, this movie accomplished somethign I've never experinced watching a movie, physical anxiety for what is about to happen. This movie made me realize not can Adam Sandler do comedy, but can also do drama, and very well. 
+
+            Set in New York City, "Uncut Gems" follows Howard Ratner (Adam Sandler), a charismatic yet compulsive jeweler that loves high-stakes gambling. Howard's life is a constant balancing act, as he juggles his failing marriage, his debts, and an ongoing pursuit of the next big "score".
+
+            What sets "Uncut Gems" apart is its relentless pace and immersive storytelling. From the frenetic camerawork to the pulsating score, every element of the film is designed to keep you on the edge of your seat. And Sandler's performance is nothing short of mesmerizing—he completely disappears into the role of Howard, bringing a depth and vulnerability to the character that is truly captivating.
+
+            But what truly elevates "Uncut Gems" is its exploration of the human condition. Beneath all the glitz and glamour of Howard's world lies a poignant commentary on the nature of obsession, addiction, and the relentless pursuit of the American Dream. It's a film that forces you to confront uncomfortable truths about yourself and the world around you, leaving you breathless and exhilarated by the time the credits roll.
+
+            In short, "Uncut Gems" is a cinematic experience like no other. It's a wild ride from start to finish, filled with twists, turns, and more than a few surprises along the way. So if you're in the mood for a movie that will leave you on the edge of your seat and gasping for breath, look no further than "Uncut Gems." Just be prepared to have your nerves thoroughly rattled in the best possible way.
+        </div> 
+
+        <footer>
+            <h1 class="footer_heading">Reccomend a Movie or TV Show for Mary to Review!</h1>
+            <form action="https://formspree.io/f/xoqgebkk" method="post">
+            <div class="form_fb">
+                <div class="name_email">
+                    <label for="name">Name</label><br>
+                    <textarea id="name" name="name" rows="3" cols="40" class="form_tb"></textarea>
+                    <br>
+                    <br>
+                    <br>
+                    <label for="email" >Email</label><br>
+                    <textarea id="email" name="email" rows="3" cols="40" class="form_tb"></textarea><br>
+                </div>
+                <div class="reccomendation">
+                    <label for ="comment">Reccomendation</label><br>
+                    <textarea id="comment" name="comment" rows="10" cols="80" class="form_tb"></textarea><br>
+                    <input type="submit" class="submit" value="Submit">
+                </div>
+            </div>
+                
+            </form>
+        </footer>
+</body>
+</html>
