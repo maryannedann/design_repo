@@ -103,67 +103,116 @@
             align-items: center;
         }
         
-        @media screen and (max-width: 768px) {
-        .aboutme_fb {
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
+     
+        @media screen and (max-width: 1080px) and (max-height: 700px) {
+    /* Recent Uploads section remains unchanged with horizontal scroll */
+    .preview_boarder {
+        display: block; /* Ensure it's visible */
+    }
 
-        .aboutme_text {
-            margin-left: 10px;
-            margin-right: 10px;
-            margin-top: 20px;
-            line-height: 1.6;
-        }
+    .preview_fb {
+        display: flex;
+        align-items: flex-start;
+        padding: 20px;
+        margin-left: 20px;
+        overflow-x: auto; /* Horizontal scrolling */
+        overflow-y: hidden;
+    }
 
-        .aboutme_img {
-            width: 150px;
-            height: auto;
-            margin-bottom: 20px;
-        }
+    .preview_imgs {
+        margin-right: 15px; /* Add some margin between images */
+    }
 
-        .spotlight_fb {
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
+    /* Header adjustments */
+    header img {
+        max-width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
 
-        .spotlight_img {
-            width: 250px;
-            height: auto;
-            margin-bottom: 20px;
-        }
+    /* Navigation Bar adjustments */
+    .nav_links {
+        text-align: center;
+        padding: 10px 0;
+    }
 
-        .preview_imgs {
-            width: 300px;
-            height: 200px;
-            padding: 0;
-            margin: 0 auto;
-            display: block;
-        }
+    .nav_link {
+        display: inline-block; /* Ensure links are horizontally aligned */
+        margin: 10px 15px;
+    }
 
-        header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 100px 0;
+    /* Spotlight Section Adjustments */
+    .spotlight_boarder { 
+        margin-top: 50px; 
+    } 
+    .spotlight_fb { 
+        flex-direction: column; /* Stack the image and text vertically */ 
+        justify-content: center; 
+        align-items: center; 
+    } 
+    .spotlight_img { 
+        width: 70%; /* Adjusted size for the image */ 
+        max-width: 600px; /* Set a max width for better control */ 
+        height: auto; 
+        margin-left: 80px;
+        margin-bottom: 20px; /* Add space between image and text */ 
+    } 
+        .spotlight_title, .spotlight_text { 
+            text-align: center; /* Center the text */ 
+            margin-top: 10px; 
+            font-size: 22px; 
+    }
+
+    /* About Me Section Adjustments */
+    .aboutme_boarder {
+        margin-top: 50px;
+    }
+
+    .aboutme_fb {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .aboutme_img {
+        width: 250px; /* Slightly larger than before */
+        height: auto;
+        margin-top: 0;
+    }
+
+    .aboutme_text {
+        margin: 20px;
+        line-height: 1.6;
+        font-size: 18px;
+        text-align: left;
+    }
+
+    /* Footer adjustments */
+    footer {
+        font-size: 0.9em;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .form_fb {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .form_tb {
+        width: 90%;
+        max-width: 500px;
+    }
+
+    .reccomendation {
+        width: 100%;
+        text-align: center;
+    }
 }
 
-        #mobile_logo {
-            display: block;
-            margin: 0 auto;
-            max-width: 180px;
-            height: auto;
-        }
 
-        #desktop_logo {
-            display: none;
-        }
 
-}    
 
     </style>
 </head>
@@ -203,7 +252,7 @@
             </div>
     
             <div>
-                <a href="whiplash_reveiw.html"><img class="preview_imgs" src="../movie_site/projectimages/whiplash2.jpeg" alt="moviestill"  width="400" height="235"></a>
+                <a href="whiplash_review.html"><img class="preview_imgs" src="../movie_site/projectimages/whiplash2.jpeg" alt="moviestill"  width="400" height="235"></a>
                 <figcaption>Whiplash</figcaption>
             </div>
         </div>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="allstyle.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../project/projectimages/favicon.ico">
+    <style>
+       .container {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto;
+    max-width: 1200px; /* or whatever width fits nicely */
+}
+
+        .flexbox1, .flexbox2 {
+            margin-top: 300px;
+            margin-bottom: 300px;
+            display: flex;
+            align-items: center; 
+            justify-content: center; 
+            padding: 20px; 
+        }
+        .flexbox2 {
+            width: 50%;
+        }
+        .project_name {
+            font-size: 45px; 
+            font-weight: bold; 
+            margin-bottom: 20px; 
+            color: #C80004;
+        }
+        .project_img {
+            width: 70%; 
+            padding: 20px; 
+        }
+
+        .project_info {
+            text-align: start; 
+            
+        }
+
+        .project_button {
+            background-color: #C80004;
+            color: #FBA105;
+            padding: 20px; 
+            font-size: 16px; 
+            border-radius: 10px;
+            border: none;
+            margin-top: 20px; 
+        }
+
+        .carousel {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel-image {
+    width: 100%;
+    display: none;
+    border-radius: 16px;
+}
+
+.carousel-image.active {
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(200, 0, 4, 0.7);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(200, 0, 4, 0.9);
+}
+
+.prev {
+    left: -50px;
+}
+
+.next {
+    right: -50px;
+}
+            
+    </style>
+</head>
+
+<body>
+        <nav>
+            <a class='nav_links' href="../design_repo/home.html#aboutme_fb">ABOUT ME</a>
+            <a class='nav_links' href="../design_repo/home.html#portfolio">PORTFOLIO</a>
+            <a class='nav_links' href="../design_repo/home.html#footer_text">CONTACT</a>
+        </nav>
+
+
+        <div class="container">
+            <div class="flexbox1">
+                <div class="carousel">
+                    <img src="../design_repo/images_projects/personal_logo.png" alt="Personal logo" class="carousel-image active">
+                    <img src="../design_repo/images_projects/style_tile.png" alt="Alternate Logo 1" class="carousel-image">
+                    <button class="prev" onclick="changeSlide(-1)">❮</button>
+                    <button class="next" onclick="changeSlide(1)">❯</button>
+                </div>
+            </div>
+        
+            <div class="flexbox2">
+                <div class="project_info">
+                    <h1 class="project_name">Personal Bradning</h1>
+                    <p class="project_description">This project was created for my Graphic Design for the Web course, where I was tasked with designing a personal logo and style tile to serve as the foundation for my personal website. I developed a bold, heart-shaped logo featuring my initials, crafted as a clean vector graphic in Adobe Illustrator. The logo’s strong red tone reflects my identity and creative energy. Complementing this, my style tile showcases a cohesive visual system with vibrant red and yellow hues, bold typography, and expressive font families that capture the overall tone of my personal brand.</p>
+                </div>
+            </div>
+        </div>
+    
+
+    <footer id="footer_text">
+        <p class="footer_text"> &copy; 2025 Mary Daniel. All Rights Reserved.</p>
+        
+        <div class="footer_social_logos">
+            <div class="social_logo_container">
+                <a href="mailto: mcdaniel@syr.edu">
+                    <img src="../design_repo/images_projects/email.png" alt="Email" class="social_logo">
+                </a>                
+                <span class="social_label">Email</span>
+            </div>
+            <div class="social_logo_container">
+                <a href="https://www.linkedin.com/in/maryannedaniel/">
+                    <img src="../design_repo/images_projects/linkedin.png" alt="LinkedIn" class="social_logo">
+                </a>
+                <span class="social_label">LinkedIn</span>
+            </div>
+            <div class="social_logo_container">
+                <a href="../design_repo/MaryDaniel_Resume.pdf">
+                    <img src="../design_repo/images_projects/resume.png" alt="Resume" class="social_logo">
+                </a>
+                <span class="social_label">Resume</span>
+            </div>
+        </div>
+    </footer>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-image');
+    
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+            });
+            slides[index].classList.add('active');
+        }
+    
+        function changeSlide(direction) {
+            currentSlide += direction;
+            if (currentSlide >= slides.length) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = slides.length - 1;
+            showSlide(currentSlide);
+        }
+    
+        // Initialize
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>

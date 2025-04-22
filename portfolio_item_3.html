@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="allstyle.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../project/projectimages/favicon.ico">
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin: 50px;
+        }
+
+        .flexbox1, .flexbox2 {
+    margin-top: 80px; /* Reduced from 300px */
+    margin-bottom: 150px; /* Optional: adjust if needed */
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    padding: 20px;
+}
+        .flexbox2 {
+            width: 50%;
+        }
+        .project_name {
+            font-size: 45px; 
+            font-weight: bold; 
+            margin-bottom: 20px; 
+            color: #C80004;
+        }
+
+        .project_img {
+    background-color: #fff; /* White background for the card */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect for card */
+    padding: 20px; /* Padding inside the card */
+    display: flex; /* Ensuring it's treated as a flex container */
+    justify-content: center;
+}
+
+.project_img iframe {
+    width: 1080px; /* Responsive width for the iframe */
+    height: 700px; /* Fixed height */
+    border-radius: 10px; /* Rounded corners for the iframe */
+}
+
+        .project_info {
+            text-align: start; 
+            
+        }
+
+        .project_button {
+            background-color: #C80004;
+            color: #FBA105;
+            padding: 20px; 
+            font-size: 16px; 
+            border-radius: 10px;
+            border: none;
+            margin-top: 20px; 
+        }
+            
+    </style>
+</head>
+
+<body>
+        <nav>
+            <a class='nav_links' href="../design_repo/home.html#aboutme_fb">ABOUT ME</a>
+            <a class='nav_links' href="../design_repo/home.html#portfolio">PORTFOLIO</a>
+            <a class='nav_links' href="../design_repo/home.html#footer_text">CONTACT</a>
+        </nav>
+
+
+    <div class="container">
+    
+        <div class="flexbox1">
+            <div class="project_img">
+                <iframe src="../design_repo/images_projects/movie_site/page1_home.html"></iframe>
+            </div>
+        </div>
+
+        <div class="flexbox2">
+            <div class="project_info">
+                <h1 class="project_name">Movie Review Site</h1>
+                <p class="project_description">This was my first ever completed HTML site for my Intro to Front End Web Development course. I was assigned to make a personal interest website and I chose to make a movie review site. I used HTML, CSS, and JavaScript to create this site. The site includes a home page, a page for each movie, and a contact page. I also included a form for users to submit their own reviews.</p>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+
+    <footer id="footer_text">
+        <p class="footer_text"> &copy; 2025 Mary Daniel. All Rights Reserved.</p>
+        
+        <div class="footer_social_logos">
+            <div class="social_logo_container">
+                <a href="mailto: mcdaniel@syr.edu">
+                    <img src="../design_repo/images_projects/email.png" alt="Email" class="social_logo">
+                </a>                
+                <span class="social_label">Email</span>
+            </div>
+            <div class="social_logo_container">
+                <a href="https://www.linkedin.com/in/maryannedaniel/">
+                    <img src="../design_repo/images_projects/linkedin.png" alt="LinkedIn" class="social_logo">
+                </a>
+                <span class="social_label">LinkedIn</span>
+            </div>
+            <div class="social_logo_container">
+                <a href="../design_repo/MaryDaniel_Resume.pdf">
+                    <img src="../design_repo/images_projects/resume.png" alt="Resume" class="social_logo">
+                </a>
+                <span class="social_label">Resume</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
